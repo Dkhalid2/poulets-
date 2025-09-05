@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poulets de Chair en Gros et Détail - Vente au Meilleur Prix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #d35400;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .logo-img {
+            max-width: 220px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo-subtitle {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            background-color: #e67e22;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+        
+        .hero {
+            background-image: url('https://www.radiofrance.fr/s3/cruiser-production/2021/11/d7312848-60e7-4724-8915-17f8e336e0d0/1200x680_poulet-boiteaux-1.jpg ');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .pricing {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        
+        .price-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .price-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-card::before {
+            content: '\f52a'; /* Icône de poulet */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: #f1c40f;
+            opacity: 0.3;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .price-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #e67e22;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d35400;
+            margin-bottom: 20px;
+        }
+        
+        .price-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .price-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .price-card ul li::before {
+            content: '\f52a'; /* Icône de poulet */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #e67e22;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #d35400;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .payment {
+            background-color: #f1f1f1;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .payment h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .payment-method {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .payment-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .payment-method::after {
+            content: '\f52a'; /* Icône de poulet */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 1rem;
+            color: #f1c40f;
+            opacity: 0.2;
+        }
+        
+        .payment-method img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        
+        .payment-method p {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .payment-instruction {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff8e1;
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        
+        .payment-instruction h3 {
+            color: #d35400;
+            margin-bottom: 10px;
+        }
+        
+        .payment-instruction ol {
+            padding-left: 20px;
+        }
+        
+        .payment-instruction li {
+            margin-bottom: 8px;
+        }
+        
+        /* Galerie */
+        .gallery {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Formulaire de commande */
+        .order-form {
+            background-color: #f1f1f1;
+            padding: 50px 0;
+        }
+        
+        .order-form h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+            text-align: center;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        form::before {
+            content: '\f52a'; /* Icône de poulet */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: #f1c40f;
+            opacity: 0.2;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        /* Carte de localisation */
+        .location {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .location h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        
+        .map-container {
+            height: 400px;
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Témoignages */
+        .testimonials {
+            padding: 50px 0;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative;
+        }
+        
+        .testimonial::after {
+            content: '\f52a'; /* Icône de poulet */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #f1c40f;
+            opacity: 0.2;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #777;
+            font-size: 14px;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .faq h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: #e67e22;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: relative;
+        }
+        
+        .contact-card::after {
+            content: '\f52a'; /* Icône de poulet */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #f1c40f;
+            opacity: 0.2;
+        }
+        
+        .contact-card i {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+        
+        .whatsapp-contact {
+            background-color: #25D366;
+            color: white;
+        }
+        
+        .whatsapp-contact i {
+            color: white;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #f1c40f;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #f1c40f;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .price-cards, .payment-methods, .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .logo-img {
+                max-width: 180px;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="poulet.jpg" alt="MISTER CHICKEN Logo" class="logo-img">
+                <div class="logo-text">MISTER CHICKEN</div>
+                <p class="logo-subtitle">Vente en gros et détail de poulets de chair de qualité</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#prix">Nos Prix</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#commande">Commander</a></li>
+                <li><a href="#paiement">Paiement</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Poulets de Chair Frais</h1>
+            <p>Meilleur qualité au meilleur prix</p>
+            <a href="#commande" class="btn">Commander maintenant</a>
+        </div>
+    </section>
+    
+    <section class="pricing" id="prix">
+        <div class="container">
+            <h2>Nos Tarifs</h2>
+            <p>Découvrez nos prix compétitifs pour les achats en gros et détail</p>
+            
+            <div class="price-cards">
+                <div class="price-card">
+                    <h3>Vente en Détail</h3>
+                    <div class="price">2 700 F</div>
+                    <ul>
+                        <li>Poulet frais de qualité</li>
+                        <li>Disponible à l'unité</li>
+                        <li>Poids standard</li>
+                        <li>Livraison possible</li>
+                    </ul>
+                    <a href="#commande" class="btn">Commander</a>
+                </div>
+                
+                <div class="price-card">
+                    <h3>Lot de 50-100</h3>
+                    <div class="price">2 300 F</div>
+                    <ul>
+                        <li>Prix par poulet</li>
+                        <li>Quantité: 50 à 100 poulets</li>
+                        <li>Poids uniforme</li>
+                        <li>Livraison incluse</li>
+                    </ul>
+                    <a href="#commande" class="btn">Commander</a>
+                </div>
+                
+                <div class="price-card">
+                    <h3>Plus de 100</h3>
+                    <div class="price">2 200 F</div>
+                    <ul>
+                        <li>Prix par poulet</li>
+                        <li>Quantité: 100+ poulets</li>
+                        <li>Meilleur prix</li>
+                        <li>Livraison rapide</li>
+                    </ul>
+                    <a href="#commande" class="btn">Commander</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="gallery" id="galerie">
+        <div class="container">
+            <h2>Notre Élevage en Images</h2>
+            <p>Découvrez les conditions d'élevage de nos poulets de qualité</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Poulet_de_chair.jpg/960px-Poulet_de_chair.jpg" alt="Élevage de poulets">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://woody.cloudly.space/app/uploads/bourg-en-bresse/2021/05/thumbs/la-belle-rencontre-elevage-poulet-sougey-web-8-sur-43-640x480.webp" alt="Poulets en liberté">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://groupesyllasarl.com/wp-content/uploads/2021/05/koudijs_packaging_poultry_broiler_25kg.jpg" alt="Nourriture saine">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://gavicole.com/wp-content/uploads/2023/08/viande-poulet-cru11-2-1024x684.jpg" alt="Poulets prêts pour la vente">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="order-form" id="commande">
+        <div class="container">
+            <h2>Formulaire de Commande</h2>
+        
+            <form id="commande-form">
+                <div class="form-group">
+                    <label for="nom">Nom complet <span class="required">*</span></label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telephone">Numéro de téléphone <span class="required">*</span></label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                   
+                <div class="form-group">    
+                    <label for="email">Email (facultatif)</label>
+                    <input name="email" id="email" type="email">
+                </div>
+ 
+                <div class="form-group">
+                    <label for="quantite">Quantité souhaitée <span class="required">*</span></label>
+                    <select id="quantite" name="quantite" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option value="1-49">1-49 poulets (2 700 F/unité)</option>
+                        <option value="50-100">50-100 poulets (2 300 F/unité)</option>
+                        <option value="100+">Plus de 100 poulets (2 200 F/unité)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="adresse">Adresse de livraison <span class="required">*</span></label>
+                    <textarea id="adresse" name="adresse" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message supplémentaire</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="payment" id="paiement">
+        <div class="container">
+            <h2>Moyens de Paiement</h2>
+            <p>Nous acceptons les paiements électroniques via les services suivants</p>
+            
+            <div class="payment-methods">
+                <div class="payment-method" onclick="openPaymentApp('orange')">
+                    <img src="https://www.orange.ci/wp-content/themes/orange/images/logo-orange.png" alt="Orange Money">
+                    <p>Orange Money</p>
+            
+                    <p>+225 07 49 03 86 86</p>
+                    <p class="payment-link">Cliquez pour payer avec Orange Money</p>
+                </div>
+
+                
+                <div class="payment-method" onclick="openPaymentApp('wave')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Wave_%28company%29_logo.svg/1200px-Wave_%28company%29_logo.svg.png" alt="Wave">
+                    <p>Wave</p>
+                    <p>+225 07 49 03 86 86</p>
+                    <p class="payment-link">Cliquez pour payer avec Wave</p>
+                </div>
+            </div>
+            
+            <div class="payment-instruction">
+                <h3>Comment effectuer votre paiement :</h3>
+                <ol>
+                    <li>Cliquez sur le logo du service de paiement que vous utilisez</li>
+                    <li>Votre application de paiement va s'ouvrir automatiquement</li>
+                    <li>Effectuez le transfert vers le numéro indiqué</li>
+                    <li>Envoyez le reçu de paiement par WhatsApp au +225 07 49 03 8686</li>
+                    <li>Votre commande sera traitée dès réception du paiement</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    
+    <section class="location">
+        <div class="container">
+            <h2>Notre Localisation</h2>
+            <p>Retrouvez-nous à notre point de vente ou contactez-nous pour la livraison</p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d509140.21%207348272!2d-4.277035925!3d5.357295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb9cd12c6091%3A0xd7335c6ce7ccbbf7!2sAbidjan%2C%20C%C3%B4te%20d&#39;Ivoire!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials" id="temoignages">
+        <div class="container">
+            <h2>Témoignages de Clients</h2>
+            <p>Ce que nos clients disent de nous</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Je commande régulièrement des poulets pour mon restaurant et je suis toujours satisfait de la qualité et du prix. Livraison rapide et service impeccable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client satisfait">
+                        <div class="author-info">
+                            <h4>Jean D.</h4>
+                            <p>Restaurateur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Pour mes événements familiaux, je me fournis toujours ici. Les poulets sont frais et de bonne taille. Je recommande vivement!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client satisfait">
+                        <div class="author-info">
+                            <h4>Marie K.</h4>
+                            <p>Particulier</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"En tant que revendeur, la qualité constante et les prix compétitifs me permettent de fidéliser ma clientèle. Service professionnel."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client satisfait">
+                        <div class="author-info">
+                            <h4>Paul B.</h4>
+                            <p>Revendeur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Questions Fréquentes</h2>
+            <p>Trouvez des réponses à vos questions</p>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Quelles sont les conditions de livraison?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nous livrons gratuitement pour les commandes de plus de 50 poulets dans un rayon de 20km. Pour les commandes plus petites ou plus éloignées, des frais de livraison peuvent s'appliquer.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Quels sont les modes de paiement acceptés?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nous acceptons les paiements en espèces à la livraison ainsi que les transferts électroniques via Orange Money, MTN Money et Wave. Cliquez simplement sur le logo du service que vous utilisez pour être redirigé vers l'application.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Comment puis-je être sûr de la qualité des poulets?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nos poulets sont élevés dans des conditions optimales avec une alimentation saine. Vous pouvez visiter notre élevage sur rendez-vous ou consulter les photos dans notre galerie.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Puis-je commander pour un événement spécifique?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, nous acceptons les réservations pour les événements (mariages, fêtes, etc.). Contactez-nous au moins une semaine à l'avance pour les grosses commandes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute question ou information supplémentaire</p>
+            
+            <div class="contact-info">
+                <div class="contact-card whatsapp-contact">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+225 07 49 03 8686</p>
+                    <p>Commandes et informations</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Téléphone</h3>
+                    <p>+225 07 49 03 86 86</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adresse</h3>
+                    <p>abobo dokui pharmacie azur,abidjan(côte d'ivoire)</p>
+                    <p>Ouvert 7j/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <a href="https://wa.me/2250749038686?text=Bonjour%20MISTER%20CHICKEN,%20je%20souhaite%20commander%20des%20poulets." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <i class="fas fa-drumstick-bite"></i>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/2250749038686" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 MISTER CHICKEN - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion du formulaire de commande
+        document.getElementById('commande-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des valeurs du formulaire
+            const nom = document.getElementById('nom').value;
+            const telephone = document.getElementById('telephone').value;
+            const email = document.getElementById('email').value;
+            const quantite = document.getElementById('quantite').value;
+            const adresse = document.getElementById('adresse').value;
+            const message = document.getElementById('message').value;
+            
+            // Construction du message WhatsApp
+            let whatsappMessage = `Bonjour MISTER CHICKEN,%0A%0A`;
+            whatsappMessage += `Je souhaite commander des poulets.%0A%0A`;
+            whatsappMessage += `*Nom:* ${nom}%0A`;
+            whatsappMessage += `*Téléphone:* ${telephone}%0A`;
+            if (email) whatsappMessage += `*Email:* ${email}%0A`;
+            whatsappMessage += `*Quantité:* ${quantite}%0A`;
+            whatsappMessage += `*Adresse de livraison:* ${adresse}%0A`;
+            if (message) whatsappMessage += `*Message:* ${message}%0A`;
+            
+            // Redirection vers WhatsApp
+            window.open(`https://wa.me/2250749038686?text=${whatsappMessage}`, '_blank');
+            
+            // Réinitialisation du formulaire
+            this.reset();
+        });
+        
+        // Fonction pour ouvrir les applications de paiement
+        function openPaymentApp(app) {
+            let url;
+            
+            switch(app) {
+                case 'orange':
+                    // Lien pour Orange Money
+                    url = 'tel:*144*07%2049%2003%2086%2086%23';
+                    break;
+                case 'mtn':
+                    // Lien pour MTN Mobile Money
+                    url = 'tel:*126*05%2005%2058%2058%2005%23';
+                    break;
+                case 'wave':
+                    // Lien pour Wave (utilise le numéro de téléphone)
+                    url = 'tel:0749038686';
+                    break;
+                default:
+                    return;
+            }
+            
+            window.location.href = url;
+        }
+        
+        // FAQ interactif
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+                
+                // Fermer les autres questions
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.parentElement.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Animation au défilement
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const nav = document.querySelector('nav');
+            
+            if (scrollPosition > 100) {
+                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
